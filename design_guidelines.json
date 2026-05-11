@@ -1,0 +1,108 @@
+{
+  "theme": "light",
+  "archetype": "4 (Swiss & High-Contrast) blended with Clinical Warmth",
+  "typography": {
+    "heading_font": "General Sans",
+    "body_font": "IBM Plex Sans",
+    "hierarchy": {
+      "h1": "text-4xl sm:text-5xl font-semibold tracking-tight text-stone-900",
+      "h2": "text-2xl sm:text-3xl font-medium tracking-tight text-stone-900",
+      "h3": "text-xl sm:text-2xl font-medium text-stone-800",
+      "h4": "text-lg sm:text-xl font-medium text-stone-800",
+      "body": "text-base text-stone-600 leading-relaxed",
+      "small": "text-sm text-stone-500",
+      "label": "text-xs font-semibold uppercase tracking-[0.1em] text-stone-500"
+    }
+  },
+  "colors": {
+    "primary": {
+      "DEFAULT": "#E35D3F",
+      "hover": "#D0482B",
+      "foreground": "#FFFFFF",
+      "light": "#FFF0ED"
+    },
+    "background": {
+      "DEFAULT": "#FFFFFF",
+      "surface": "#FAFAFA",
+      "sidebar": "#FFFFFF"
+    },
+    "text": {
+      "primary": "#1C1917",
+      "secondary": "#57534E",
+      "muted": "#A8A29E"
+    },
+    "border": {
+      "DEFAULT": "#E7E5E4",
+      "focus": "#E35D3F"
+    },
+    "status": {
+      "success": "#10B981",
+      "warning": "#F59E0B",
+      "error": "#EF4444"
+    }
+  },
+  "spacing_and_layout": {
+    "philosophy": "Clinical precision. High white space. Strict alignment. Optical clarity.",
+    "container_padding": "p-8 md:p-12",
+    "border_radius": "rounded-lg",
+    "shadows": {
+      "card": "shadow-[0_2px_10px_rgba(0,0,0,0.04)]",
+      "dropdown": "shadow-[0_8px_30px_rgba(0,0,0,0.08)]"
+    },
+    "grid_system": "Bento Grid Protocol B (Control Room) for Dashboard. High density, gap-4 to gap-6. Strict use of borders."
+  },
+  "components": {
+    "buttons": "Flat, sharp edges or subtle roundness (rounded-md). Primary is bold orange, secondary is white with border-stone-200. No heavy gradients.",
+    "cards": "White background, 1px border-stone-200, subtle shadow, rounded-lg. Clean padding (p-6).",
+    "inputs": "Shadcn input but with focus-visible:ring-primary. Clean borders.",
+    "tables": "Minimalist rows. No vertical borders. Generous padding per cell (py-4).",
+    "timeline": "Custom vertical line with orange dots. Cards on the right detailing the consultation.",
+    "image_comparison": "Hero feature. Two images side-by-side or slider, strict aspect ratio (e.g., 4:5 or 1:1), hover to zoom. Use object-cover.",
+    "toast": "Use Sonner for notifications. Clean white background with subtle border."
+  },
+  "motion": {
+    "hover": "Subtle border color change, bg tint change. Buttons scale down active state (scale-95).",
+    "page_transition": "framer-motion fade in and slide up (y: 10, opacity: 0 to 1).",
+    "image_zoom": "Transform scale-105 on hover for before/after galleries, transition-transform duration-500."
+  },
+  "media": {
+    "image_urls": {
+      "auth_background": {
+        "url": "https://images.unsplash.com/photo-1748543668643-1ada33167539?w=1600&q=85",
+        "description": "Cosmetic serums and gels on a soft background, used for the left side of the login page."
+      },
+      "auth_background_alt": {
+        "url": "https://images.unsplash.com/photo-1748543668687-624e058c367c?w=1600&q=85",
+        "description": "Alternative abstract liquid texture for login background."
+      },
+      "doctor_avatar": {
+        "url": "https://images.unsplash.com/photo-1673865641073-4479f93a7776?w=400&q=80",
+        "description": "Female consultant avatar used in header/sidebar."
+      },
+      "skin_before": {
+        "url": "https://images.unsplash.com/photo-1730288951113-9cc087c14b83?w=800&q=80",
+        "description": "Close up of skin, used in the consultation before/after gallery."
+      },
+      "skin_after": {
+        "url": "https://images.unsplash.com/photo-1762114468187-971a71a5fe70?w=800&q=80",
+        "description": "Close up of skin, used in the consultation before/after gallery."
+      }
+    },
+    "icons": "lucide-react"
+  },
+  "instructions_to_main_agent": [
+    "Install lucide-react, recharts, framer-motion, sonner, clsx, tailwind-merge.",
+    "Setup routing (e.g., react-router-dom) with paths for Login, Dashboard, Clients List, Client Profile, Add/Edit Client, Add Consultation, User Management, Audit Logs.",
+    "Implement JWT Auth (Login page) redirecting to Dashboard. Use 'auth_background' for a split-screen login design.",
+    "Create Dashboard with top KPI cards, search bar, and recent clients table.",
+    "Build Clients List page with search + complex filters (Skin concern, treatment type, date range).",
+    "Build Client Profile page. This is the core. It needs a header with personal info, a side panel or section for skin type/allergies/product history, and a large timeline view for consultations.",
+    "In the Client Profile, implement an Image Gallery for Before/After comparison. Build a side-by-side split view component for these images with hover zoom.",
+    "Add Consultation form needs a Date Picker (Shadcn Calendar), textarea for notes, multiple selection for products used, and an image upload area (mock the upload, just show preview).",
+    "Admin Audit logs page to track activities.",
+    "User management page for Admin role.",
+    "Ensure all interactive elements have data-testid attributes.",
+    "Avoid centered card layouts; use left-aligned, clinical data grids. Ensure generous padding in containers.",
+    "Use orange (#E35D3F) strictly as a functional accent for primary buttons, active tabs, and key data points. Do not overuse it to maintain the clinical trust."
+  ]
+}
